@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[java8用Lambda表达式遍历集合]]></title>
+    <url>%2F2019%2F08%2F25%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[Lambda表达式是java8新推出的一种“语法糖”，是对java中匿名内部类的一种简写，更有效的提高开发效率，对函数书编程的理解也有重要的作用 123456789101112131415161718192021222324252627282930313233import java.util.ArrayList;import java.util.List;public class Lambda &#123; public static void main(String[] args) &#123; List&lt;String&gt; list = new ArrayList&lt;&gt;(); list.add("zhagnsan"); list.add("wangwu"); list.add("huanjin"); list.add("biali"); //增强for循环 for (String str : list) &#123; System.out.println(str); &#125; System.out.println("---------------"); //第一种Lambda表达式 list.forEach((String string) -&gt; &#123; System.out.println(string); &#125;); System.out.println("-------------------"); //由于只有一个参数，可以省略参数类型 list.forEach((str) -&gt; &#123; System.out.println(str); &#125;); System.out.println("---------------------"); //由于只有一个参数，可以省略小括号，又由于只有一条语句，可以省略大括号， list.forEach(string -&gt; System.out.println(string)); System.out.println("---------------------"); //jdk8的新特性，双冒号是一种关键字 list.forEach(System.out::println); &#125;&#125;]]></content>
+  </entry>
+</search>
